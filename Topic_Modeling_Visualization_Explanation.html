@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Modeling Visualization Explanation</title>
+    <style>
+        body {font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 0; color: #333;}
+        h1 {color: #0056b3;}
+        h2 {color: #0066CC; border-bottom: 1px solid #ddd;}
+        p {margin: 10px 0;}
+        ul {margin: 10px 0 10px 20px;}
+    </style>
+</head>
+<body>
+    <h1>Understanding Topic Modeling Visualization</h1>
+    <h2>1. Inter-topic Distance Map (Left Panel)</h2>
+    <p>This panel shows a scatter plot or multidimensional scaling (MDS) plot of the topics:</p>
+    <ul>
+        <li><strong>Circles:</strong> Each circle represents a topic. The size of a circle indicates the prevalence of the topic in the dataset.</li>
+        <li><strong>Distance Between Circles:</strong> Ideally, the distance between any two circles reflects how different the topics are. Closer circles suggest similar topics.</li>
+        <li><strong>Hovering:</strong> When you hover over a circle, you'll see the most relevant terms for that topic highlighted.</li>
+    </ul>
+    <h2>2. Top Terms (Right Panel)</h2>
+    <p>This panel lists terms that are relevant to the selected topic in two ways:</p>
+    <ul>
+        <li><strong>Relevance Metric:</strong> It uses a lambda value, which you can adjust with a slider, to balance the term frequency within the topic against the term's exclusivity to the topic.</li>
+        <li><strong>Terms List:</strong> Shows the terms most associated with the selected topic. Adjusting the lambda value shifts the terms shown, focusing either on those most exclusive to the topic (higher lambda values) or most frequently appearing in the topic (lower lambda values).</li>
+    </ul>
+    <h2>3. Bar Charts (in Top Terms Panel)</h2>
+    <p>For each term in the list:</p>
+    <ul>
+        <li><strong>Red Bars:</strong> Represent the term's frequency within the selected topic.</li>
+        <li><strong>Blue Bars (if visible):</strong> Represent the overall frequency of the term across the entire dataset.</li>
+    </ul>
+    <h2>How to Use the Visualization</h2>
+    <ul>
+        <li><strong>Explore Topics:</strong> Click on different circles in the left panel to see how the list of terms in the right panel changes. This helps you understand what each topic is about based on the terms most strongly associated with it.</li>
+        <li><strong>Adjust Lambda:</strong> Move the slider to change the lambda value. Lowering lambda (closer to 0) makes the terms list more about what terms are distinct to the topic, potentially at the expense of how often they appear. A higher lambda value (closer to 1) emphasizes term frequency within the topic.</li>
+        <li><strong>Compare Topics:</strong> Look at the distance and overlap between topics in the left panel to gauge similarities or differences between the topics.</li>
+    </ul>
+    <h2>Interpreting the Visualization</h2>
+    <p>The goal of <code>pyLDAvis</code> is to help you make qualitative judgments about the meanings of the topics by:</p>
+    <ul>
+        <li>Identifying topics that are well-formed (clearly differentiable from other topics and internally coherent) versus those that are less interpretable.</li>
+        <li>Understanding the relationships between words and topics, which helps in understanding the structure of the information contained in your data set.</li>
+    </ul>
+</body>
+</html>
