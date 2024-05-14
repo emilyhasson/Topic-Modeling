@@ -12,3 +12,5 @@ This project uses advanced natural language processing techniques to analyze and
 1. `LDA.py` - Script for performing LDA topic modeling on the entire dataset.
 2. `LDA-multi.py` - Script for calculating cosine similarities between the topic distributions of two data subsets.
 3. `author-tm.py` - Script for implementing author modeling to assess topic distributions across the dataset.
+4. `cleaned-categories.xlsx` - Test data to demonstrate format of input.
+5. `requiements.txt`
